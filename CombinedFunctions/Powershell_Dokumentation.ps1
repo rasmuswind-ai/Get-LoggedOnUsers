@@ -15,8 +15,8 @@
     set-Item wsman:\localhost\Client\TrustedHosts -Value 10.0.2.* 
 
     #opret en PSSession til en server fra det andet domain
-    Enter-PSSession -ComputerName server2 -Credential domain2\administrator
-
+    $Server2Session = New-PSSession  -ComputerName server2 -Credential domain2\administrator
+    Enter-PSSession -Session $Server2Session
 #Udfordring:
 
 #Kommunikationen skal være SSL-krypteret
