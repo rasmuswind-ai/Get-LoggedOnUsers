@@ -126,15 +126,8 @@
 #Sørg for at PSRemoting er slået til, med en GPO, som standard på alle maskiner i domænet
     #jeg har lavet en GPO det aktiver PSRemoting via WinRM Service gpo tilfogerj osse firewall reler og activer WinRM Service
 
-#Udfordring:
-#Opsæt ’the elusive multihop’, så man kan videregive sit credential i nestede sessions
-    #
-
-
 #Ekstra opgaver:
-#Opsæt Powershell i en Linux Klient og sørg for at der kan remotes til denne.
-    #
 #Opsæt en Database og sørg for at der kan foretages udtræk fra denne.
-    #
+    #https://github.com/rasmuswind-ai/Get-LoggedOnUsers
 
 #endregion
