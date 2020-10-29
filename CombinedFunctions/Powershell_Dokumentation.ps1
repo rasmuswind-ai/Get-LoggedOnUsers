@@ -50,7 +50,7 @@
     Import-Certificate -Filepath "C:\temp\cert" -CertStoreLocation "Cert:\LocalMachine\Root"
 
     #opret en PSSession til en server 
-    $Server2Session = New-PSSession -Session "NewSession" -ComputerName server2.domain2.local -UseSSL -Credential domain2\administrator
+    $Server2Session = New-PSSession  -ComputerName server2.domain2.local -UseSSL -Credential domain2\administrator
     Enter-PSSession -Session $Server2Session
 
 #Udfordring 2:
@@ -99,13 +99,32 @@
     #Der skal laves et profilescript for de forskellige brugere af domænet.
     #   Der skal oprettes OU’er for forskellige typer brugere med forskellige profilescripts
             #profilescript for Domain Admin
+            
+            Set-ExecutionPolicy Unrestricted -Force
+
+            Copy-Item "\\server1\PS SH\CombinedFunctions" -Destination "C:\Program Files\WindowsPowerShell\Modules" -Force -Recurse
+            Import-Module CombinedFunctions
+            
+            Write-Output "Nuværende Bruger"
+            ([adsi]"WinNT://$env:userdomain/$env:username,user").fullname
+            Write-Output " "
 
             #profilescript for Back
-                
+            
+            Set-ExecutionPolicy Unrestricted -Force
+
+            Write-Output "Nuværende Bruger"
+            ([adsi]"WinNT://$env:userdomain/$env:username,user").fullname
+            Write-Output " "
+            
             #profilescript for front
 
-    #Sørg for at PSRemoting er slået til, med en GPO, som standard på alle maskiner i domænet
-        #jeg har lavet en GPO det aktiver PSRemoting via WinRM Service gpo tilfogerj osse firewall reler og activer WinRM Service
+            Write-Output "Nuværende Bruger"
+            ([adsi]"WinNT://$env:userdomain/$env:username,user").fullname
+            Write-Output " "
+
+#Sørg for at PSRemoting er slået til, med en GPO, som standard på alle maskiner i domænet
+    #jeg har lavet en GPO det aktiver PSRemoting via WinRM Service gpo tilfogerj osse firewall reler og activer WinRM Service
 
 #Udfordring:
 #Opsæt ’the elusive multihop’, så man kan videregive sit credential i nestede sessions
