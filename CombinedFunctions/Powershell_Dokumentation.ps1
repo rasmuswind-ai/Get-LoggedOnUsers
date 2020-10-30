@@ -17,6 +17,7 @@
     #opret en PSSession til en server fra det andet domain
     $Server2Session = New-PSSession  -ComputerName server2 -Credential domain2\administrator
     Enter-PSSession -Session $Server2Session
+
 #Udfordring:
 
 #Kommunikationen skal være SSL-krypteret
@@ -85,9 +86,8 @@
 #Og ligger under "CombinedFunctions"
 
 
-
-    #
 #Udfordring:
+
 #Installer en af serverne med en webservice og skab jeres eget repository hvor i kan gemme og hente moduler fra ved hjælp af PowershellGet eller NuGet
     #Repository er lavet som et simpelthen netværks share
 
