@@ -10,7 +10,7 @@
 #╚██████╔╝███████╗   ██║      ███████╗╚██████╔╝╚██████╔╝╚██████╔╝███████╗██████╔╝╚██████╔╝██║ ╚████║╚██████╔╝███████║███████╗██║  ██║███████║
 # ╚═════╝ ╚══════╝   ╚═╝      ╚══════╝ ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝╚═════╝  ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝
                                                                                                                                             
-#region "Get-LoggedOnUsers"
+
     <#
     .SYNOPSIS
         Lists the currently logged on users and the time of their session.
@@ -41,6 +41,8 @@
     .FUNCTIONALITY
         This CMDLet runs different lines of code to list the currently logged on users, and their session time start date.
     #>
+    
+#region "Get-LoggedOnUsers"
     function Get-LoggedOnUsers {
 
 
@@ -81,7 +83,7 @@
 #╚██████╔╝███████╗   ██║      ██║ ╚████║╚██████╔╝██║ ╚═╝ ██║██████╔╝███████╗██║  ██║╚██████╔╝██║     ███████╗╚██████╔╝╚██████╔╝╚██████╔╝██║ ╚████║███████║
 # ╚═════╝ ╚══════╝   ╚═╝      ╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚══════╝
                                                                                                                                                          
-#region "Get-NumberOfLogons"
+
 <#
     .SYNOPSIS
         Lists the currently logged on users and the Number of Logons for each user.
@@ -112,6 +114,7 @@
     .FUNCTIONALITY
         This CMDLet runs different lines of code to list the currently logged on users, and their number of logons.
     #>
+#region "Get-NumberOfLogons"
     function Get-NumberOfLogons {
 
             #Gets the CimInstance that shows logged on users
@@ -151,7 +154,7 @@
 #╚██████╔╝███████╗   ██║      ███████╗██║  ██║███████║   ██║   ███████╗╚██████╔╝╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝██║  ██║   ██║   ███████╗
 # ╚═════╝ ╚══════╝   ╚═╝      ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝ ╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝
                                                                                                                                             
-#region "Get-LastLogonDate"
+
     <#
     .SYNOPSIS
         Lists the currently logged on users and the date that their password will expire.
@@ -182,6 +185,7 @@
     .FUNCTIONALITY
         This CMDLet runs different lines of code to list the currently logged on users, and their last logon date.
     #>
+    #region "Get-LastLogonDate"
     function Get-LastLogonDate {
 
             #Gets the CimInstance that shows logged on users

@@ -84,14 +84,13 @@
 
 #Modulen er blevet lagt op på github; https://github.com/rasmuswind-ai/Get-LoggedOnUsers
 #Og ligger under "CombinedFunctions"
-register-PSRepository -Name LocalRepository -SourceLocation "\\server1\PS SH\CombinedFunctions" -ScriptSourceLocation "\\server1\PS SH\CombinedFunctions" -InstallationPolicy Trusted
-Publish-Module -Path "\\server1\PS SH\CombinedFunctions" -NuGetApiKey "Nugetkey" -Repository "LocalRepository" -Verbose
 
 #Udfordring:
 
 #Installer en af serverne med en webservice og skab jeres eget repository hvor i kan gemme og hente moduler fra ved hjælp af PowershellGet eller NuGet
-    #Repository er lavet som et simpelthen netværks share
-
+    register-PSRepository -Name LocalRepository -SourceLocation "\\server1\PS SH\CombinedFunctions" -ScriptSourceLocation "\\server1\PS SH\CombinedFunctions" -InstallationPolicy Trusted
+    Publish-Module -Path "\\server1\PS SH\CombinedFunctions" -NuGetApiKey "Nugetkey" -Repository "LocalRepository" -Verbose
+    
 
 #endregion
 
