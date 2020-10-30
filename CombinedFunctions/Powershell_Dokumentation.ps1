@@ -102,8 +102,7 @@
             
             Set-ExecutionPolicy Unrestricted -Force
 
-            Copy-Item "\\server1\PS SH\CombinedFunctions" -Destination "C:\Program Files\WindowsPowerShell\Modules" -Force -Recurse
-            Import-Module CombinedFunctions
+            Get-Module CombinedFunctions
             
             Write-Output "Nuværende Bruger"
             ([adsi]"WinNT://$env:userdomain/$env:username,user").fullname
