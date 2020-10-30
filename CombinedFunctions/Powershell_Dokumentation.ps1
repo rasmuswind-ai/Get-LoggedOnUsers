@@ -98,7 +98,7 @@
 #Del 3: Profiles, user autonomy og GPO
     #Der skal laves et profilescript for de forskellige brugere af domænet.
     #   Der skal oprettes OU’er for forskellige typer brugere med forskellige profilescripts
-            #profilescript for Domain Admin
+            #region "profilescript for Domain Admin"
             
             Set-ExecutionPolicy Unrestricted -Force
 
@@ -108,21 +108,23 @@
             Write-Output "Nuværende Bruger"
             ([adsi]"WinNT://$env:userdomain/$env:username,user").fullname
             Write-Output " "
+            #endregion
 
-            #profilescript for Back
+            #region "profilescript for Back"
             
             Set-ExecutionPolicy Unrestricted -Force
 
             Write-Output "Nuværende Bruger"
             ([adsi]"WinNT://$env:userdomain/$env:username,user").fullname
             Write-Output " "
-            
-            #profilescript for front
+            #endregion
+
+            #region "profilescript for front"
 
             Write-Output "Nuværende Bruger"
             ([adsi]"WinNT://$env:userdomain/$env:username,user").fullname
             Write-Output " "
-
+            #endregion
 #Sørg for at PSRemoting er slået til, med en GPO, som standard på alle maskiner i domænet
     #jeg har lavet en GPO det aktiver PSRemoting via WinRM Service gpo tilfogerj osse firewall reler og activer WinRM Service
 
