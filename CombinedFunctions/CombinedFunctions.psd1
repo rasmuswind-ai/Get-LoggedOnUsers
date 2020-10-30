@@ -30,7 +30,7 @@ CompanyName = 'Unknown'
 Copyright = '(c) Rasmus Wind, Anders Mathiesen. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = ''
+# Description = 'Powershell module: CombinedFunctions (Get-LoggedOnUsers, Get-NumberOfLogons, Get-LastLogon)'
 
 # Minimum version of the PowerShell engine required by this module
 # PowerShellVersion = ''

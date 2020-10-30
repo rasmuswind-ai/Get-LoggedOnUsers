@@ -126,7 +126,6 @@
             Write-Output " "
             #endregion
 #Sørg for at PSRemoting er slået til, med en GPO, som standard på alle maskiner i domænet
-    #jeg har lavet en GPO det aktiver PSRemoting via WinRM Service gpo tilfogerj osse firewall reler og activer WinRM Service
 
 #Ekstra opgaver:
 #Opsæt en Database og sørg for at der kan foretages udtræk fra denne.
